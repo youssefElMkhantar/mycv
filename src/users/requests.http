@@ -3,6 +3,41 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "asdf@fjhj.com",
-    "password": "khfrhjhbjhb"
+    "email": "test1@test.com",
+    "password": "12345"
+}
+
+### signin a user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test1@test.com",
+    "password": "12345"
+}
+
+### signout a user
+POST http://localhost:3000/auth/signout
+
+###
+GET  http://localhost:3000/auth/whoami
+
+
+### find a new user by id
+get http://localhost:3000/auth/4
+
+
+### find all users by email
+get http://localhost:3000/auth?email=youssef@haha.com
+
+
+### delete user by id
+delete http://localhost:3000/auth/1
+
+### create a new user
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "email": "youssef@haha.com"
 }
